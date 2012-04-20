@@ -5,6 +5,11 @@
 </ul>
 
 <p>
+  <b>Name or Address:</b>
+  <%= @map.name %>
+</p>
+
+<p>
   <b>Latitude:</b>
   <%= @map.latitude %>
 </p>
@@ -14,15 +19,9 @@
   <%= @map.longitude %>
 </p>
 
-<p>
-  <b>Gmaps:</b>
-  <%= @map.gmaps %>
-</p>
 
-<p>
-  <b>Name:</b>
-  <%= @map.name %>
-</p>
+
+
 
 
 <%= link_to 'Edit', edit_map_path(@map) %> |

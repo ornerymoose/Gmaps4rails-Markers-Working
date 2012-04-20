@@ -12,3 +12,5 @@
  *= require gmaps4rails
  *= require_tree .
 */
+
+#new_map { display: none; }

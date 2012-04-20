@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require gmaps4rails/googlemaps.js
 //= require_tree .
+
+$(function(){
+  
+  $("#new_map_form_link").click(function(e) {
+    e.preventDefault();
+    $("#new_map").show();
+    $("#new_map_form_link").hide();
+  });
+});
+

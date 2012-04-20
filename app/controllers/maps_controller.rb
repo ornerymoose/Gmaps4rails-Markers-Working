@@ -3,7 +3,11 @@ class MapsController < ApplicationController
   # GET /maps.json
   def index
     @maps = Map.all
-
+    @map = Map.new
+    
+    #temp
+    @markers = Map.all.to_a.to_gmaps4rails 
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @maps }
@@ -14,7 +18,7 @@ class MapsController < ApplicationController
   # GET /maps/1.json
   def show
     @map = Map.find(params[:id])
-    @markers = Map.all.to_a.to_gmaps4rails 
+    @markers = Map.find(params[:id]).to_gmaps4rails 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @map }
@@ -41,10 +45,10 @@ class MapsController < ApplicationController
   # POST /maps.json
   def create
     @map = Map.new(params[:map])
-
+    
     respond_to do |format|
       if @map.save
-        format.html { redirect_to @map, notice: 'Map was successfully created.' }
+        format.html { redirect_to :root, notice: 'Location was successfully created.' }
         format.json { render json: @map, status: :created, location: @map }
       else
         format.html { render action: "new" }

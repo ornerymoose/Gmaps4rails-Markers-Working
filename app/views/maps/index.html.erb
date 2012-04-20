@@ -1,11 +1,10 @@
-<h1>Listing maps</h1>
+<h2>Businesses with Coupontrade.com Coupons</h2>
 
 <table>
   <tr>
+    <th>Name/Address</th>
     <th>Latitude</th>
     <th>Longitude</th>
-    <th>Gmaps</th>
-    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,17 +12,20 @@
 
 <% @maps.each do |map| %>
   <tr>
+    <td><%= map.name %></td>
     <td><%= map.latitude %></td>
     <td><%= map.longitude %></td>
-    <td><%= map.gmaps %></td>
-    <td><%= map.name %></td>
     <td><%= link_to 'Show', map %></td>
     <td><%= link_to 'Edit', edit_map_path(map) %></td>
     <td><%= link_to 'Destroy', map, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
+<p>
+<%= link_to 'Add a New Location to Current Map', new_map_path, :id => 'new_map_form_link' %>
+<%= render 'form' %><p>
 
-<br />
-
-<%= link_to 'New Map', new_map_path %>
+<ul id="markers_list"> 
+<%= gmaps4rails(@markers) %>
+</ul> 
+</p>
