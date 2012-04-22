@@ -2,8 +2,11 @@
 
 <ul id="markers_list"> 
   <%= gmaps({
-    "map_options" => {"auto_adjust" => true },
-    "markers"     => {"data" => @markers, "options" => { "draggable" => true} }
+    "map_options" => { 
+    "auto_adjust" => true,     
+    "auto_zoom" => false, 
+    "zoom" => 15 },
+    "markers" => {"data" => @markers }
    })
   %>
 </ul>
