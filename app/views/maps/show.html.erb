@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <ul id="markers_list"> 
-<%= gmaps4rails(@markers) %>
+  <%= gmaps({
+    "map_options" => {"auto_adjust" => true },
+    "markers"     => {"data" => @markers, "options" => { "draggable" => true} }
+   })
+  %>
 </ul>
+
+
 
 <p>
   <b>Name or Address:</b>

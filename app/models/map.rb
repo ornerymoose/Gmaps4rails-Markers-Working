@@ -9,5 +9,6 @@ class Map < ActiveRecord::Base
      "<h4>
         Name/Address: <a href='/maps/#{id}'>#{name}</a> 
       </h4>"
+    
   end
 end
