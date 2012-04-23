@@ -15,6 +15,27 @@
 //= require gmaps4rails/googlemaps.js
 //= require_tree .
 
+// jQuery.ajaxSetup({
+//   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+// })
+// 
+// jQuery.fn.submitWithAjax = function() {
+//   this.submit(function() {
+//     $.post(this.action, (this).serialize(), null, "script");
+// 	return false;
+//   })
+//   return this;
+// };
+// 
+// $(document).ready(function() {
+//   $("#new_map").submitWithAjax();
+// })
+
+$('#maps').live('pageshow',function(event){
+
+  Gmaps.loadMaps(); 
+});
+
 $(function(){
   
   $("#new_map_form_link").click(function(e) {
@@ -23,4 +44,9 @@ $(function(){
     $("#new_map_form_link").hide();
   });
 });
+
+
+
+
+
 

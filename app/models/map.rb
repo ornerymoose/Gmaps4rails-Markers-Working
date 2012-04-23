@@ -6,9 +6,9 @@ class Map < ActiveRecord::Base
   end
   
   def gmaps4rails_infowindow
-     "<h4>
-        Name/Address: <a href='/maps/#{id}'>#{name}</a> 
-      </h4>"
-    
+     "<img src=/ctlogo.jpg height=50 width=70><h5>
+        Name/Address: <br><a href='/maps/#{id}'>#{name}</a> 
+      </h5>"
+     
   end
 end

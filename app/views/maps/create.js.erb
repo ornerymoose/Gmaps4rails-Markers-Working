@@ -1,0 +1,18 @@
+//$("#new_map").before('jyejtejtdjtd<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>')
+//$("#maps").append("<%= escape_javascript(render(:partial => @map)) %>")
+
+//$('#maps').html('<%= escape_javascript( gmaps({:last_map => false}) ) %>');
+
+Gmaps.map = new Gmaps4RailsGoogle();
+Gmaps.load_map = function() {
+    Gmaps.map.map_options.maxZoom = 15;
+    Gmaps.map.initialize();
+    Gmaps.map.markers = <%= @markers.to_gmaps4rails %>;
+    Gmaps.map.create_markers();
+    Gmaps.map.adjustMapToBounds();
+    Gmaps.map.callback();
+};
+Gmaps.loadMaps();
+
+
+
