@@ -31,7 +31,7 @@
 //   $("#new_map").submitWithAjax();
 // })
 
-$('#maps').live('pageshow',function(event){
+$('#gmaps').live('pageshow',function(event){
 
   Gmaps.loadMaps(); 
 });

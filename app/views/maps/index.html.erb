@@ -12,10 +12,9 @@
 
 <% @maps.each do |map| %>
   <tr>
-    <td><%= map.name %></td>
+    <td><%= link_to map.name, map %></td>
     <td><%= map.latitude.round(4) %></td>
     <td><%= map.longitude.round(4) %></td>
-    <td><%= link_to 'Show', map %></td>
     <td><%= link_to 'Edit', edit_map_path(map) %></td>
     <td><%= link_to 'Destroy', map, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -26,6 +25,6 @@
 <%= render 'form' %><p>
 
 <ul id="markers_list"> 
-<%= gmaps4rails(@markers) %>
+<%= gmaps4rails(@markers, false, false) %>
 </ul> 
 </p>
