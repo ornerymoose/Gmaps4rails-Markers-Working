@@ -31,10 +31,10 @@
 //   $("#new_map").submitWithAjax();
 // })
 
-$('#gmaps').live('pageshow',function(event){
-
-  Gmaps.loadMaps(); 
-});
+// $('#gmaps').live('pageshow',function(event){
+// 
+//   Gmaps.loadMaps(); 
+// });
 
 $(function(){
   

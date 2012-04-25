@@ -48,7 +48,7 @@ class MapsController < ApplicationController
     
     respond_to do |format|
       if @map.save
-        format.js
+        #format.js
         format.html { redirect_to :root, notice: 'Location was successfully created.' }
         format.json { render json: @map, status: :created, location: @map }
       else
