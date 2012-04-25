@@ -1,4 +1,4 @@
-<%= form_for(@map)  do |f| %>
+<%= form_for(@map) do |f| %>
   <% if @map.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@map.errors.count, "error") %> prohibited this map from being saved:</h2>
@@ -17,6 +17,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit "Add New Location"%>
+    <%= f.submit "Add New Location" %>
   </div>
 <% end %>
