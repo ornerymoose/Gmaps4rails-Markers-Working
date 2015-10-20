@@ -23,9 +23,7 @@ a {
   color: black;
   &:visited {
     color: black; }
-  &:hover {
-    color: none;
-    background-color: none; } }
+  }
 
 div {
   &.field, &.actions {
