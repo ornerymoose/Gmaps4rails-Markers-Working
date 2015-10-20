@@ -24,8 +24,8 @@ a {
   &:visited {
     color: black; }
   &:hover {
-    color: #00FFCC;
-    background-color: blue; } }
+    color: none;
+    background-color: none; } }
 
 div {
   &.field, &.actions {
